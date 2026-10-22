@@ -1,0 +1,402 @@
+{
+ "screen": "face",
+ "w": 480,
+ "h": 480,
+ "screen_bg": "#000000",
+ "font": "fonts/DejaVuSans.ttf",
+ "default_font_size": 20,
+ "swipe": false,
+ "objects": [
+  {
+   "type": "container",
+   "parent": -1,
+   "name": "pet",
+   "x": 0,
+   "y": 0,
+   "w": 480,
+   "h": 480,
+   "bg_color": "#000000",
+   "events": [
+    {
+     "event": "press",
+     "action": "call",
+     "callback": "poke"
+    },
+    {
+     "event": "long",
+     "action": "call",
+     "callback": "hold"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "parent_name": "pet",
+   "name": "pom",
+   "w": 400,
+   "h": 400,
+   "x": {
+    "property": "x",
+    "default": 40,
+    "min": 28,
+    "max": 52
+   },
+   "y": {
+    "property": "y",
+    "default": 44,
+    "min": 0,
+    "max": 70
+   }
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "body",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "h": 400,
+   "image": "pom_body.svg"
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "blush_love",
+   "x": 70,
+   "y": 232,
+   "w": 260,
+   "h": 40,
+   "image": "love_blush.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "brows_normal",
+   "x": 70,
+   "y": 128,
+   "w": 260,
+   "h": 40,
+   "image": "brows_normal.svg",
+   "bind": "brows_normal_vis",
+   "bind_target": "visible"
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "brows_sad",
+   "x": 70,
+   "y": 128,
+   "w": 260,
+   "h": 40,
+   "image": "brows_sad.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "brows_up",
+   "x": 70,
+   "y": 128,
+   "w": 260,
+   "h": 40,
+   "image": "brows_up.svg",
+   "hidden": true
+  },
+  {
+   "type": "container",
+   "parent_name": "pom",
+   "name": "eyes",
+   "w": 224,
+   "h": 84,
+   "x": {
+    "property": "x",
+    "default": 88,
+    "min": 66,
+    "max": 110
+   },
+   "y": {
+    "property": "y",
+    "default": 158,
+    "min": 146,
+    "max": 170
+   }
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_l",
+   "x": 0,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_open.svg",
+   "morph_to": "eye_closed.svg",
+   "morph": 0,
+   "bind": "eye_l_vis",
+   "bind_target": "visible"
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_happy_l",
+   "x": 0,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_happy.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_surprised_l",
+   "x": 0,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_surprised.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_love_l",
+   "x": 0,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_love.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_dizzy_l",
+   "x": 0,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_dizzy.svg",
+   "hidden": true,
+   "rotation": {
+    "default": 0,
+    "min": -360,
+    "max": 360
+   }
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_r",
+   "x": 140,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_open.svg",
+   "morph_to": "eye_closed.svg",
+   "morph": 0,
+   "bind": "eye_r_vis",
+   "bind_target": "visible"
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_happy_r",
+   "x": 140,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_happy.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_surprised_r",
+   "x": 140,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_surprised.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_love_r",
+   "x": 140,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_love.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "eyes",
+   "name": "eye_dizzy_r",
+   "x": 140,
+   "y": 0,
+   "w": 84,
+   "h": 84,
+   "image": "eye_dizzy.svg",
+   "hidden": true,
+   "rotation": {
+    "default": 0,
+    "min": -360,
+    "max": 360
+   }
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_idle",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_idle.svg",
+   "bind": "mouth_idle_vis",
+   "bind_target": "visible"
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_happy",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_happy.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_surprised",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_surprised.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_dizzy",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_dizzy.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_sad",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_sad.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_love",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_love.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_sleepy",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_sleepy.svg",
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "mouth_talk",
+   "x": 140,
+   "y": 236,
+   "w": 120,
+   "h": 60,
+   "image": "mouth_talk_closed.svg",
+   "morph_to": "mouth_talk_open.svg",
+   "morph": 0,
+   "hidden": true
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "tear",
+   "w": 30,
+   "h": 44,
+   "hidden": true,
+   "image": "tear.svg",
+   "x": {
+    "property": "x",
+    "default": 298,
+    "min": 290,
+    "max": 306
+   },
+   "y": {
+    "property": "y",
+    "default": 214,
+    "min": 200,
+    "max": 250
+   }
+  },
+  {
+   "type": "image",
+   "parent_name": "pom",
+   "name": "zzz",
+   "w": 80,
+   "h": 80,
+   "hidden": true,
+   "image": "zzz.svg",
+   "x": {
+    "property": "x",
+    "default": 316,
+    "min": 300,
+    "max": 330
+   },
+   "y": {
+    "property": "y",
+    "default": 10,
+    "min": -20,
+    "max": 30
+   }
+  },
+  {
+   "type": "label",
+   "parent_name": "pet",
+   "name": "dbg",
+   "bind": "dbg",
+   "x": 20,
+   "y": 446,
+   "w": 440,
+   "h": 28,
+   "text": "idle",
+   "font_size": 18,
+   "fg_color": "#8A8F98",
+   "text_align": "center",
+   "overflow": "clip",
+   "hidden": true,
+   "font_charset": "abcdefghijklmnopqrstuvwxyz0123456789 +:-()/"
+  }
+ ]
+}
